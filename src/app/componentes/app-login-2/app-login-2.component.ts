@@ -40,7 +40,12 @@ export class AppLogin2Component {
       next: (response) => {
         localStorage.setItem('token', response.token)
         localStorage.setItem('id', response.id.toString())
-        this.router.navigate(['/perfil-profissional'])
+        console.log(response)
+        if(response.role === 'PROFISSIONAL') {
+          this.router.navigate(['/perfil-profissional'])
+        } else if(response.role === 'EMPRESA') {
+          this.router.navigate(['/perfil-empresa'])
+        }
       },
       error: (error) => {
         console.log(error)

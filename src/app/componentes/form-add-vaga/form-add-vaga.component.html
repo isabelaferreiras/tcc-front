@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" >
     <div class="form-container">
         <div class="itens-form">
 
@@ -7,56 +7,44 @@
             </div>
 
             <div class="titulo">
-                <input type="text" name="titulo" id="" placeholder="Título da vaga">
+                <input type="text" name="titulo" id="" placeholder="Título da vaga" formControlName="titulo">
             </div>
 
             <div class="cargo">
-                <input type="text" name="cargo" id="" placeholder="Cargo">
+                <input type="text" name="cargo" id="" placeholder="Cargo" formControlName="cargo">
             </div>
 
             <div class="descricao">
-                <textarea name="descricao" id="" placeholder="Insira uma descrição para a vaga"></textarea>
+                <textarea name="descricao" id="" placeholder="Insira uma descrição para a vaga" formControlName="descricao"></textarea>
             </div>
 
-            <div class="endereco">
+            <div class="endereco" formGroupName="endereco">
                 <div class="cidade">
-                    <input type="text" name="cidade" id="" placeholder="Cidade">
+                    <input type="text" name="cidade" id="" placeholder="Cidade" formControlName="cidade">
                 </div>
                 <div class="estado">
-                    <select name="estado" id="">
-                        <option value="">AC</option>
-                            <option value="">AL</option>
-                            <option value="">AP</option>
-                            <option value="">AM</option>
-                            <option value="">BA</option>
-                            <option value="">CE</option>
-                            <option value="">DF</option>
-                            <option value="">ES</option>
-                            <option value="">GO</option>
-                            <option value="">MA</option>
-                            <option value="">MT</option>
-                            <option value="">MS</option>
-                            <option value="">MG</option>
-                            <option value="">PA</option>
-                            <option value="">PB</option>
-                            <option value="">PR</option>
-                            <option value="">PE</option>
-                            <option value="">PI</option>
-                            <option value="">RJ</option>
-                            <option value="">RN</option>
-                            <option value="">RS</option>
-                            <option value="">RO</option>
-                            <option value="">RR</option>
-                            <option value="">SC</option>
-                            <option value="">SP</option>
-                            <option value="">SE</option>
-                            <option value="">TO</option>
-                    </select>
+                    <input type="text" name="estado" id="" placeholder="estado" formControlName="estado">
                 </div>
+            </div>
+
+            <!-- Novo Checkbox para o campo limite -->
+            <div class="limite">
+                <label>
+                    <input type="checkbox" formControlName="limite"> Limitar número de profissionais?
+                </label>
+            </div>
+
+            <p>Valor de limite: {{ form.get('limite')?.value }}</p>
+
+
+            <!-- Novo Input numérico para o campo limiteProfissionais -->
+            <div class="limite-profissionais" *ngIf="form.get('limite')?.value">
+                <label for="limiteProfissionais">Número limite de profissionais:</label>
+                <input formControlName="limiteProfissionais" type="number" name="limiteProfissionais" id="limiteProfissionais" min="1">
             </div>
 
             <div class="botao-save">
-                <button>Salvar</button>
+                <button (click)="onSubmit()">Salvar</button>
             </div>
 
         </div>
