@@ -1,0 +1,17 @@
+<app-cabecalho-empresa></app-cabecalho-empresa>
+
+
+
+<div class="main-container">
+
+    <div class="titulo">
+        <h2><strong>Candidatos inscritos na vaga</strong></h2>
+    </div>
+
+    <div class="geral">
+        <div class="profissional" *ngFor="let profissional of profissionalList">
+            <app-view-profissional
+            [profissional]="profissionalData"></app-view-profissional>
+        </div>
+    </div>
+</div>

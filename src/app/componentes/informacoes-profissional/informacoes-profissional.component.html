@@ -1,0 +1,32 @@
+<div class="info-container">
+    <h3><strong>Informações pessoais</strong></h3>
+    <div class="itens-container">
+        <div class="inputs">
+            <div class="nome-sobrenome">
+                <div>
+                    <input type="text" placeholder="Nome" class="nome" [readOnly]="habilitarInput" >
+                </div>
+                <div>
+                    <input type="text" name="sobrenome" placeholder="Sobrenome" class="sobrenome" [readOnly]="habilitarInput">
+                </div>
+            </div>
+            <div class="nome-sobrenome">
+                <input type="email" name="email" placeholder="E-mail" class="email-input" [readOnly]="habilitarInput">
+            </div>
+            <div class="container-senha">
+                <div class="input-senha">
+                    <input type="password" placeholder="Senha" class="password" [readOnly]="habilitarInput"/>
+                </div>
+            </div>
+            <div class="nome-sobrenome">
+                <input type="date" name="dataNascimento" placeholder="Data de Nascimento" class="data-nascimento" [readOnly]="habilitarInput">
+            </div>
+            <div class="nome-sobrenome">
+                <input type="tel" name="telefone" id="" placeholder="Adicionar telefone" [readOnly]="habilitarInput">
+            </div>
+        </div>
+        <div class="botao-editar">
+            <button type="button" (click)="enableInput()" class="botao">Editar Informações</button>
+        </div>
+    </div>
+</div>

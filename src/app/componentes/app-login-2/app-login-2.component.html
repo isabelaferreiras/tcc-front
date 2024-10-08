@@ -1,0 +1,38 @@
+<form [formGroup]="form">
+    <div class="main-container">
+    
+        <section class="login">
+    
+    
+            <div class="itens">
+    
+            </div>
+    
+            <img src="../../../assets/logo branca.jpeg" class="logo-pequena">
+            <div class="dialogo">
+                <p>Insira sua senha</p>
+                <p>abaixo</p>
+            </div>
+            <div class="inputs">
+                <div class="input-email">
+                    <input type="email" placeholder="E-mail" class="email" formControlName="login">
+                </div>
+                <div class="container-senha">
+                    <div class="input-senha">
+                        <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Senha" formControlName="password"/>
+                    </div>
+                    <button class="botao-senha"
+                    mat-icon-button
+                    matSuffix
+                    (click)="clickEvent($event)"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide()"
+                    >
+                    <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <button class="enter" (click)="onSubmit()">Entrar</button>
+        </section>
+    </div>
+</form>

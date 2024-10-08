@@ -1,0 +1,16 @@
+<app-cabecalho></app-cabecalho>
+
+<div class="body-container">
+    <div class="titulo">
+        <h2><strong>Vagas disponíveis para candidatar-se</strong></h2>
+    </div>
+    <div class="card-container">
+        <div class="card" *ngFor="let card of cardList">
+            <app-card-vagas
+                [card]="cardData"
+                [empresa]="empresaData"
+                [endereco]="enderecoData">
+            </app-card-vagas>
+        </div>
+    </div>
+</div>

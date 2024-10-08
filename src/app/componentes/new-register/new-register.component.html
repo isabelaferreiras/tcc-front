@@ -1,0 +1,60 @@
+<form [formGroup]="form">
+    <section class="main_container">
+        <section class="form__container">
+                <section class="registro">
+                    <div>
+                        <img src="../../../assets/logo branca.jpeg" width="200px"  alt="logo" class="logo-pequena">
+                    </div>
+                    <div class="dialogo">
+                        <p class="dialogo-1">Você é um profissional...</p>
+                    </div>
+                    <div class="inputs">
+                        <div class="nome-sobrenome">
+                            <div>
+                                <input type="name" placeholder="Nome" class="nome" formControlName="nome">
+                            </div>
+                            <div>
+                                <input type="sobrenome" name="sobrenome" placeholder="Sobrenome" class="sobrenome" formControlName="sobrenome">
+                            </div>
+                        </div>
+                        <div class="nome-sobrenome">
+                            <input type="email" name="email" placeholder="E-mail" class="email-input" formControlName="email">
+                        </div>
+                        <div class="container-senha">
+                            <div class="input-senha">
+                                <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Senha" class="password" formControlName="password"/>
+                                <button class="botao-senha"
+                                mat-icon-button
+                                matSuffix
+                                (click)="clickEvent($event)"
+                                [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide()"
+                                >
+                                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="nome-sobrenome">
+                            <input type="date" name="dataNascimento" placeholder="Data de Nascimento" class="data-nascimento" formControlName="dataNascimento">
+                        </div>
+                        <div class="endereco" formGroupName="endereco">
+                            <div class="cidade">
+                                <input type="text" name="cidade" id="" placeholder="Cidade" formControlName="cidade">
+                            </div>
+                            <div class="estado">
+                                <input type="text" name="estado" id="" placeholder="Estado (max: 2 caracteres)" formControlName="estado">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="botao">
+                            <button type="submit" class="botao-registrar" (click)="onSubmit()">Registrar</button>
+                        </div>
+                        <div class="voltar">
+                            <p routerLink="/login" class="dialogo-2">Usuário já existente? Entre na sua conta</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+    </section>
+</form>

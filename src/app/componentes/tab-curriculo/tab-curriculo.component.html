@@ -1,0 +1,264 @@
+<mat-tab-group>
+    <mat-tab label="Dados pessoais">
+        
+        <div class="main-container">
+            
+            <div class="titulo">
+                <h3><strong>Dados pessoais</strong></h3>
+            </div>
+
+            <div class="container-dados"> 
+
+                <div class="dados">
+                    <div class="nome">
+                        <input type="text" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="sobrenome">
+                        <input type="text" name="sobrenome" placeholder="Sobrenome">
+                    </div>
+                </div>
+    
+                <div class="dados">
+                    <div class="email">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="data-nascimento">
+                        <input type="date" name="data de nascimento" placeholder="Data de nascimento">
+                    </div>
+                    <div class="telefone">
+                        <input type="tel" name="telefone" id="" placeholder="Telefone">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="titulo">
+                <h3><strong>Endereço</strong></h3>
+            </div>
+
+            <div class="container-endereco">
+                <div class="cidade">
+                    <input type="text" name="cidade" id="" placeholder="Cidade">
+                </div>
+                <div class="cidade">
+                    <select name="estado" id="" class="estados">
+                        <option value="">AC</option>
+                        <option value="">AL</option>
+                        <option value="">AP</option>
+                        <option value="">AM</option>
+                        <option value="">BA</option>
+                        <option value="">CE</option>
+                        <option value="">DF</option>
+                        <option value="">ES</option>
+                        <option value="">GO</option>
+                        <option value="">MA</option>
+                        <option value="">MT</option>
+                        <option value="">MS</option>
+                        <option value="">MG</option>
+                        <option value="">PA</option>
+                        <option value="">PB</option>
+                        <option value="">PR</option>
+                        <option value="">PE</option>
+                        <option value="">PI</option>
+                        <option value="">RJ</option>
+                        <option value="">RN</option>
+                        <option value="">RS</option>
+                        <option value="">RO</option>
+                        <option value="">RR</option>
+                        <option value="">SC</option>
+                        <option value="">SP</option>
+                        <option value="">SE</option>
+                        <option value="">TO</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+    </mat-tab>
+
+    <mat-tab label="Escolaridade">
+        
+        <div class="container-escolaridade">
+            <div class="escolaridade">
+                <select name="escolaridade" id="">
+                    <option value="">Ensino fundamental incompleto</option>
+                    <option value="">Ensino fundamental completo</option>
+                    <option value="">Ensino médio incompleto</option>
+                    <option value="">Ensino médio completo</option>
+                    <option value="">Ensino técnico</option>
+                    <option value="">Graduação incompleta</option>
+                    <option value="">Graduação em curso</option>
+                    <option value="">Graduação completa</option>
+                    <option value="">Pós-graduação</option>
+                    <option value="">Mestrado</option>
+                    <option value="">Doutorado</option>
+                    <option value="">Pós-doutorado</option>
+                </select>
+            </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Experiência profissional">
+
+        <div class="container-experiencia" *ngFor="let experiencia of experiencias; let i = index">
+
+            <div class="titulo-2">
+                <h2><strong>Experiência - preencha abaixo:</strong></h2>
+            </div>
+
+            <div class="experiencias">
+                <div class="cargo">
+                    <input type="text" name="cargo" [(ngModel)]="experiencia.cargo" placeholder="Cargo">
+                </div>
+                <div class="empresa">
+                    <input type="text" name="empresa" [(ngModel)]="experiencia.empresa" placeholder="Empresa">
+                </div>
+            </div>
+
+            <div class="texto">
+                <div class="descricao">
+                    <textarea name="descricao" id="" [(ngModel)]="experiencia.descricao" placeholder="Descreva suas funções onde trabalhava"></textarea>
+                </div>
+            </div>
+
+            <div class="titulo-2">
+                <h3><strong>Endereço</strong></h3>
+            </div>
+
+            <div class="container-end">
+                <div class="cidade">
+                    <input type="text" name="cidade" [(ngModel)]="experiencia.cidade" placeholder="Cidade">
+                </div>
+                <div class="cidade">
+                    <select name="estado" [(ngModel)]="experiencia.estado" id="" class="estados">
+                        <option value="">AC</option>
+                        <option value="">AL</option>
+                        <option value="">AP</option>
+                        <option value="">AM</option>
+                        <option value="">BA</option>
+                        <option value="">CE</option>
+                        <option value="">DF</option>
+                        <option value="">ES</option>
+                        <option value="">GO</option>
+                        <option value="">MA</option>
+                        <option value="">MT</option>
+                        <option value="">MS</option>
+                        <option value="">MG</option>
+                        <option value="">PA</option>
+                        <option value="">PB</option>
+                        <option value="">PR</option>
+                        <option value="">PE</option>
+                        <option value="">PI</option>
+                        <option value="">RJ</option>
+                        <option value="">RN</option>
+                        <option value="">RS</option>
+                        <option value="">RO</option>
+                        <option value="">RR</option>
+                        <option value="">SC</option>
+                        <option value="">SP</option>
+                        <option value="">SE</option>
+                        <option value="">TO</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="titulo-2">
+                <h3><strong>Começo e fim</strong></h3>
+            </div>
+
+            <div class="container-datas">
+                <div class="data">
+                    <input type="date" [(ngModel)]="experiencia.dataInicio" name="começo" id="">
+                </div>
+                <div class="data">
+                    <input type="date" [(ngModel)]="experiencia.dataFim" name="fim" id="">
+                </div>
+            </div>
+
+            <div class="titulo-2">
+                <h3><strong>Salário</strong></h3>
+            </div>
+
+            <div class="container-salario">
+                <div class="salario">
+                    <input type="number" [(ngModel)]="experiencia.salario" placeholder="0,00">
+                </div>
+            </div>
+
+            <div class="botao-remover">
+                <!-- Botão para remover experiência -->
+                <button (click)="removerExperiencia(i)">Remover</button>
+            </div>
+        
+        </div>
+
+        <div class="botoes-add-save">
+
+            <div>
+                <button (click)="adicionarExperiencia()">Adicionar nova experiência</button>
+            </div>
+
+            <div>
+                <button (click)="salvarExperiencias()">Salvar Experiências</button>
+            </div>
+            
+        </div>
+        
+
+    </mat-tab>
+
+    <mat-tab label="Habilidades pessoais">
+
+        <div class="container-escolaridade" *ngFor="let habilidade of habilidadesPessoais; let i = index">
+            <div class="escolaridade">
+                <input type="text" name="" [(ngModel)]="habilidade.habilidade" placeholder="Habilidade pessoal">
+            </div>
+
+            <div class="botao-remover">
+                <!-- Botão para remover experiência -->
+                <button (click)="removerHabilidadePessoal(i)">Remover</button>
+            </div>
+
+        </div>
+
+        <div class="botoes-add-save">
+
+            <div>
+                <button (click)="adicionarHabilidadePessoal()">Adicionar nova habilidade</button>
+            </div>
+
+            <div>
+                <button (click)="salvarHabilidadePessoal()">Salvar habilidades</button>
+            </div>
+            
+        </div>
+
+    </mat-tab>
+    <mat-tab label="Habilidades técnicas">
+
+        <div class="container-escolaridade" *ngFor="let habilidade of habilidadesTecnicas; let i = index">
+            <div class="escolaridade">
+                <input type="text" name="" placeholder="Habilidades técnicas">
+            </div>
+
+            <div class="botao-remover">
+                <!-- Botão para remover experiência -->
+                <button (click)="removerHabilidadeTecnica(i)">Remover</button>
+            </div>
+        </div>
+
+        <div class="botoes-add-save">
+
+            <div>
+                <button (click)="adicionarHabilidadeTecnica()">Adicionar nova habilidade</button>
+            </div>
+
+            <div>
+                <button (click)="salvarHabilidadeTecnica()">Salvar habilidades</button>
+            </div>
+            
+        </div>
+
+    </mat-tab>
+  </mat-tab-group>

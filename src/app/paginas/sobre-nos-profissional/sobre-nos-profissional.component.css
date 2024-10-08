@@ -1,0 +1,29 @@
+.tela {
+    padding: 1rem;
+}
+
+.titulo h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container-pai {
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 34rem;
+    padding: 1rem;
+    background-color: rgb(250, 178, 84);
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+.descricao p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.itens {
+    align-items: center;
+    text-align: justify;
+}

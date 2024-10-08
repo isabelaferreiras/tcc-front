@@ -1,0 +1,88 @@
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: rgb(247, 202, 145);
+    border-radius: 1rem;
+}
+
+.card-container {
+    max-width: 23rem;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.527);
+    border-radius: 0.625rem;
+}
+
+.itens-card {
+    width: 100%;
+}
+
+.titulos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.6rem;
+}
+
+.titulo h3 {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.cargo p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.descricao p {
+    font-size: 0.75rem;
+    text-align: justify;
+}
+
+.calda-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscritos p {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.limite p {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.situacao p {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    text-align: center;
+    max-width: 7rem;
+    width: 7rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+    background-color: #592405;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+button:hover {
+    background-color: #221005;
+}
+
+
+

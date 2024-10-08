@@ -1,0 +1,99 @@
+/*.login {
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(61, 139, 253, 0.15);
+    width: 453px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 56px 134px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    height: 400px;
+}
+
+.logo-pequena {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}*/
+
+
+.login {
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(61, 139, 253, 0.15);
+    width: 453px;
+    height: 100vh;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 56px 134px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-pequena {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.p1{
+    text-align: center;  /* Centraliza o texto horizontalmente */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;  /* Ajuste conforme necessário */
+    color: #b36924;   /* Cor conforme o protótipo */
+    margin-top: 30px;
+}
+
+p {
+    margin: 10; /* Remove margens padrão para garantir alinhamento correto */
+    padding: 0;
+  }
+
+input {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-radius: 12px;
+    border: 1px solid #592405;
+    height: 32px;
+    width: 268px;
+}
+
+
+.ou {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+
+    /*margin: 15px 0; 
+    
+    
+    
+    text-align: center;*/
+}
+
+.botao {
+    background-color: #592405;
+    color: #ffffff;
+    height: 32px;
+    border-radius: 12px;
+    border: 1px solid #592405;
+    width: 100%;               /* Certifique-se que ocupa a largura do container */
+    max-width: 268px;
+    margin-bottom: 15px;
+    cursor: pointer;           /* Aparece como botão interativo */
+    text-align: center;
+}
+
+

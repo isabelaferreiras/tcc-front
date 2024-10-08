@@ -1,0 +1,83 @@
+<section class="main_container">
+    <section class="form__container">
+        <section class="registro">
+            <div>
+                <img src="../../../assets/logo branca.jpeg" width="200px" alt="logo" class="logo-pequena">
+            </div>
+            <div class="dialogo">
+                <p class="dialogo-1">Você é uma empresa...</p>
+            </div>
+            <div class="inputs">
+                <div class="nome-sobrenome">
+                    <input type="email" name="email" placeholder="E-mail" class="email-input">
+                </div>
+                <div class="container-senha">
+                    <div class="input-senha">
+                        <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Senha" class="password" />
+                        <button class="botao-senha" mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="nome-sobrenome">
+                    <input type="name" placeholder="Nome da empresa" class="nome">
+                </div>
+                <div class="nome-sobrenome">
+                    <input type="cnpj" name="cnpj" placeholder="CNPJ" class="cnpj">
+                </div>
+
+
+                <div class="endereco">
+                    <div class="nome-sobrenome">
+                        <div>
+                            <input type="cidade" placeholder="Cidade">
+                        </div>
+                        <div>
+                            <select name="estado" id="" class="estados">
+                                <option value="">AC</option>
+                                <option value="">AL</option>
+                                <option value="">AP</option>
+                                <option value="">AM</option>
+                                <option value="">BA</option>
+                                <option value="">CE</option>
+                                <option value="">DF</option>
+                                <option value="">ES</option>
+                                <option value="">GO</option>
+                                <option value="">MA</option>
+                                <option value="">MT</option>
+                                <option value="">MS</option>
+                                <option value="">MG</option>
+                                <option value="">PA</option>
+                                <option value="">PB</option>
+                                <option value="">PR</option>
+                                <option value="">PE</option>
+                                <option value="">PI</option>
+                                <option value="">RJ</option>
+                                <option value="">RN</option>
+                                <option value="">RS</option>
+                                <option value="">RO</option>
+                                <option value="">RR</option>
+                                <option value="">SC</option>
+                                <option value="">SP</option>
+                                <option value="">SE</option>
+                                <option value="">TO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="itens">
+                <div class="botao">
+                    <button routerLink="/perfil-empresa" class="botao-registrar">Registrar</button>
+                </div>
+                <div class="voltar">
+                    <p routerLink="/login" class="dialogo-2">Usuário já existente? Entre na sua conta</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

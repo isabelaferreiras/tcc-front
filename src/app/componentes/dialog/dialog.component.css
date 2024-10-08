@@ -1,0 +1,10 @@
+::ng-deep html {
+    --mdc-dialog-container-color: #ffffff;
+    --mdc-dialog-subhead-color: rgb(0, 0, 0);
+    --mdc-dialog-supporting-text-color: rgb(0, 0, 0);
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: rgb(245, 182, 100);
+    border-radius: 1rem;
+}
