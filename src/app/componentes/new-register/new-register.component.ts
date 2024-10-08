@@ -61,7 +61,7 @@ export class NewRegisterComponent {
     }
     this.registerService.registrarProfissional(body).subscribe({
       next: (response) => {
-        this.router.navigate(['/perfil-profissional'])
+        this.router.navigate(['/login'])
       },
       error: (error) => {
         console.log(error)

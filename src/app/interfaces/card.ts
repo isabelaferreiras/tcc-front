@@ -17,7 +17,7 @@ export enum Situacao {
     NAO_ATIVO = 'NAO_ATIVO'
 }
 
-export interface criarVaga {
+export interface CriarVaga {
     titulo: string;
     empresaId: number;
     endereco: Endereco;
@@ -25,5 +25,4 @@ export interface criarVaga {
     cargo: string;
     limite: boolean;
     limiteProfissionais: number;
-    situacao: Situacao;
 }

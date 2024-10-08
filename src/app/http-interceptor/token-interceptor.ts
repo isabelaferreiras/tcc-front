@@ -10,7 +10,7 @@ export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, n
     ]
 
     const isPublicEndpoint = (url: string) => {
-        const relativeUrl = url.replace('http://localhost:9090', '');
+        const relativeUrl = url.replace('http://localhost:8080', '');
 
         return publicEndpoint.some((endpoint) => {
             return relativeUrl === endpoint;

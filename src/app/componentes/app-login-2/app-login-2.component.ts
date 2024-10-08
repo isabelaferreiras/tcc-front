@@ -39,6 +39,7 @@ export class AppLogin2Component {
     this.loginService.login(login).subscribe({
       next: (response) => {
         localStorage.setItem('token', response.token)
+        localStorage.setItem('id', response.id.toString())
         this.router.navigate(['/perfil-profissional'])
       },
       error: (error) => {
