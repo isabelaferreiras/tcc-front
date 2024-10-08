@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CriarProfissional } from '../interfaces/profissional';
 import { Observable } from 'rxjs';
+import { CriarEmpresa } from '../interfaces/empresa';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,13 @@ export class RegisterService {
   registrarProfissional(body: CriarProfissional): Observable<any> {
     return this.http.post<any>(
       'http://localhost:9090/profissional',
+      body
+    );
+  }
+
+  registrarEmpresa(body: CriarEmpresa): Observable<any> {
+    return this.http.post<any>(
+      'http://localhost:9090/empresa',
       body
     );
   }

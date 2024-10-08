@@ -7,5 +7,5 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { TokenInterceptor } from './http-interceptor/token-interceptor';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient(withFetch(), withInterceptors([TokenInterceptor]))]
+  providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient(withFetch(), withInterceptors([TokenInterceptor]))],
 };

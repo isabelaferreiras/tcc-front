@@ -1,7 +1,7 @@
 import { HttpHandler, HttpHandlerFn, HttpInterceptor, HttpInterceptorFn, HttpRequest } from "@angular/common/http";
 
 
-/*export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn) => {
+export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn) => {
     const token = localStorage.getItem('token');
     const publicEndpoint = [
         '/auth/login',
@@ -27,4 +27,4 @@ import { HttpHandler, HttpHandlerFn, HttpInterceptor, HttpInterceptorFn, HttpReq
     }
 
     return next(req);
-}*/
+}
