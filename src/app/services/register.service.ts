@@ -13,14 +13,14 @@ export class RegisterService {
 
   registrarProfissional(body: CriarProfissional): Observable<any> {
     return this.http.post<any>(
-      'http://localhost:9090/profissional',
+      'http://localhost:8080/profissional',
       body
     );
   }
 
   registrarEmpresa(body: CriarEmpresa): Observable<any> {
     return this.http.post<any>(
-      'http://localhost:9090/empresa',
+      'http://localhost:8080/empresa',
       body
     );
   }

@@ -15,5 +15,4 @@ export interface CriarEmpresa {
     cnpj: string;
     ramo: string;
     password: string;
-    situacao: string;
 }

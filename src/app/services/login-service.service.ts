@@ -12,7 +12,7 @@ export class LoginServiceService {
 
   login(body: Login): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(
-      'http://localhost:9090/auth/login',
+      'http://localhost:8080/auth/login',
       body
     );
   }

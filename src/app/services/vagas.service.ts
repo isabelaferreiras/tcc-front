@@ -10,6 +10,6 @@ export class VagasService {
   constructor(private http: HttpClient) { }
 
   mostrarTodasVagas(): Observable<any> {
-    return this.http.get<any>('http://localhost:9090/vagas')
+    return this.http.get<any>('http://localhost:8080/vagas')
   }
 }

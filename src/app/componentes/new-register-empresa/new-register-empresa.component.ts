@@ -36,8 +36,7 @@ export class NewRegisterEmpresaComponent {
     descricao: new FormControl('', [Validators.required]),
     cnpj: new FormControl('', [Validators.required]), 
     ramo: new FormControl('', [Validators.required]), 
-    password: new FormControl('', [Validators.required]), 
-    situacao: new FormControl('', [Validators.required])
+    password: new FormControl('', [Validators.required]) 
   })
 
 
@@ -52,8 +51,7 @@ export class NewRegisterEmpresaComponent {
       descricao: this.form.controls.descricao.value!,
       cnpj: this.form.controls.cnpj.value!,
       ramo: this.form.controls.ramo.value!,
-      password: this.form.controls.password.value!,
-      situacao: this.form.controls.situacao.value!
+      password: this.form.controls.password.value!
     }
     this.registerService.registrarEmpresa(body).subscribe({
       next: (response) => {
