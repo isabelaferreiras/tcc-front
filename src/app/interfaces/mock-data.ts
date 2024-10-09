@@ -6,6 +6,7 @@ import { Escolaridade } from "./escolaridade";
 import { ExperienciaProfissional } from "./experiencia-profissional";
 import { HabilidadesPessoais } from "./habilidades-pessoais";
 import { HabilidadesTecnicas } from "./habilidades-tecnicas";
+import { Idioma } from "./idioma";
 import { Profissional } from "./profissional";
 
 
@@ -70,10 +71,14 @@ export const habilidadesTecnicasExample: HabilidadesTecnicas[] = [
     { habilidade: "Pacote Office" }
 ];
 
+export const idiomasExample: Idioma[] = [
+    {idioma: 'inglês', nivelLeitura: 'médio', nivelConversacao: 'básico'}
+]
+
 export const curriculoExample: Curriculo = {
     id: 1,
     profissional: profissionalExample,
-
+    idiomas: idiomasExample,
     escolaridade: Escolaridade.GRADUACAO_COMPLETA,
     experienciaProfissional: experienciaExample,
     habilidadesPessoais: habilidadesPessoaisExample,

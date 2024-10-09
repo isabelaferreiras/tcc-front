@@ -14,6 +14,28 @@
     --mat-tab-header-active-hover-indicator-color: #592405;
 }
 
+.main-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.botao-salvar {
+    display: flex;
+    justify-content: center;
+}
+
+.botao-salvar button {
+    width: 6rem;
+    background-color: #592405;
+    border: 1px solid #592405;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+
 .titulo {
     padding-left: 2rem;
     padding-top: 1rem;
@@ -147,6 +169,12 @@
     height: 5rem;
     border-radius: 0.5rem;
     border: 1px solid #592405;
+}
+
+.container-escolaridade {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .container-end {

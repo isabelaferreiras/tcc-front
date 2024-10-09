@@ -1,7 +1,12 @@
 import {MatTabsModule} from '@angular/material/tabs';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Idioma } from '../../interfaces/idioma';
+import { CurriculoService } from '../../services/curriculo.service';
+import { Escolaridade } from '../../interfaces/escolaridade';
+import { CriarCurriculo } from '../../interfaces/curriculo';
+import { ExperienciaProfissional } from '../../interfaces/experiencia-profissional';
 
 
 export interface ExampleTab {
@@ -31,33 +36,41 @@ export interface HabilidadesTecnicas {
 @Component({
   selector: 'app-tab-curriculo',
   standalone: true,
-  imports: [MatTabsModule, CommonModule, FormsModule],
+  imports: [MatTabsModule, CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './tab-curriculo.component.html',
-  styleUrl: './tab-curriculo.component.css'
+  styleUrl: './tab-curriculo.component.css',
+  providers: [ CurriculoService ]
 })
 export class TabCurriculoComponent {
 
+  constructor(private curriculoService: CurriculoService) {}
+
    // Array para armazenar as coisas
-   experiencias: Experience[] = [];
+   experiencias: ExperienciaProfissional[] = [];
    habilidadesPessoais: HabilidadesPessoais[] = [];
    habilidadesTecnicas: HabilidadesTecnicas[] = [];
+   idiomas: Idioma[] = [];
 
 
    //********seção experiências*******/
 
    // Método para adicionar uma nova experiência
    adicionarExperiencia() {
-    console.log('Adicionando nova experiência');
-     this.experiencias.push({
-       cargo: '',
-       empresa: '',
-       descricao: '',
-       cidade: '',
-       estado: '',
-       dataInicio: new Date(),
-       dataFim: new Date(),
-       salario: 0
-     });
+    const experiencia: ExperienciaProfissional = {
+      cargo: this.form.controls.experienciaProfissional.controls.cargo.value!,
+      empresa: this.form.controls.experienciaProfissional.controls.empresa.value!,
+      endereco: {
+        cidade: this.form.controls.experienciaProfissional.controls.endereco.controls.cidade.value!,
+        estado: this.form.controls.experienciaProfissional.controls.endereco.controls.estado.value!
+      },
+      descricao: this.form.controls.experienciaProfissional.controls.descricao.value!,
+      dataComeco: this.form.controls.experienciaProfissional.controls.dataComeco.value!,
+      dataFim: this.form.controls.experienciaProfissional.controls.dataFim.value!,
+      salario: this.form.controls.experienciaProfissional.controls.salario.value!
+    }
+
+    this.experiencias.push(experiencia);
+    this.form.controls.experienciaProfissional.reset();
    }
  
    // Método para remover uma experiência
@@ -65,44 +78,102 @@ export class TabCurriculoComponent {
      this.experiencias.splice(index, 1);
    }
  
-   // Aqui você pode salvar as informações das experiências
-   salvarExperiencias() {
-     console.log(this.experiencias);
-     // Aqui você poderia enviar os dados para um serviço ou back-end
-   }
-
    //******seção habilidades*********
 
    adicionarHabilidadePessoal() {
-    console.log('Adicionando nova habilidade');
-    this.habilidadesPessoais.push({
-      habilidade: '',
-    });
+    const habilidadePessoal: HabilidadesPessoais = {
+      habilidade: this.form.controls.habilidadesPessoais.controls.habilidade.value!
+    }
+    this.habilidadesPessoais.push(habilidadePessoal);
+    this.form.controls.habilidadesPessoais.controls.habilidade.reset();
    }
 
    removerHabilidadePessoal(index: number) {
     this.habilidadesPessoais.splice(index, 1);
    }
 
-   salvarHabilidadePessoal() {
-    console.log(this.habilidadesPessoais);
-   }
-
    // ********seção habilidades tecnicas************
 
    adicionarHabilidadeTecnica() {
-    console.log('Adicionando nova habilidade');
-    this.habilidadesTecnicas.push({
-      habilidade: '',
-    });
+    const habilidadeTecnica: HabilidadesTecnicas = {
+      habilidade: this.form.controls.habilidadesTecnicas.controls.habilidade.value!
+    }
+    this.habilidadesTecnicas.push(habilidadeTecnica);
+    this.form.controls.habilidadesTecnicas.controls.habilidade.reset();
    }
 
    removerHabilidadeTecnica(index: number) {
     this.habilidadesTecnicas.splice(index, 1);
    }
 
-   salvarHabilidadeTecnica() {
-    console.log(this.habilidadesTecnicas);
+   //*******seçao idioma******
+
+   adicionarIdioma() {
+    const idiomas: Idioma = {
+      idioma: this.form.controls.idiomas.controls.idioma.value!,
+      nivelLeitura: this.form.controls.idiomas.controls.nivelLeitura.value!,
+      nivelConversacao: this.form.controls.idiomas.controls.nivelConversacao.value!
+    }
+    this.idiomas.push(idiomas);
+    this.form.controls.idiomas.reset();
    }
+
+   removerIdioma(index: number) {
+    this.idiomas.splice(index, 1);
+   } 
+
+   form = new FormGroup({
+    profissionalId: new FormControl(Number(localStorage.getItem('id'))),
+    escolaridade: new FormControl('', [Validators.required]),
+    experienciaProfissional: new FormGroup({
+      cargo: new FormControl('', [Validators.required]),
+      empresa: new FormControl('', [Validators.required]),
+      endereco: new FormGroup({
+        cidade: new FormControl('', [Validators.required]),
+        estado: new FormControl('', [Validators.required])
+      }),
+      descricao: new FormControl('', [Validators.required]),
+      dataComeco: new FormControl(new Date(), [Validators.required]),
+      dataFim: new FormControl(new Date(), [Validators.required]),
+      salario: new FormControl(0, [Validators.required])
+    }),
+    habilidadesPessoais: new FormGroup({
+      habilidade: new FormControl('', [Validators.required])
+    }),
+    habilidadesTecnicas: new FormGroup({
+      habilidade: new FormControl('', [Validators.required])
+    }),
+    idiomas: new FormGroup({
+      idioma: new FormControl('', [Validators.required]),
+      nivelLeitura: new FormControl('', [Validators.required]),
+      nivelConversacao: new FormControl('', [Validators.required])
+    })
+   })
+
+  getFormattedDate(date: Date): string {
+    const dataNascimento: Date = new Date(date);
+  
+    const dia: string = String(dataNascimento.getDate()).padStart(2, '0');
+    const mes: string = String(dataNascimento.getMonth() + 1).padStart(2, '0'); // Os meses começam em 0 no JavaScript
+    const ano: number = dataNascimento.getFullYear();
+  
+    return `${dia}/${mes}/${ano}`;
+  }
+
+  onSubmit() {
+    const body: CriarCurriculo = {
+      profissionalId: this.form.controls.profissionalId.value!,
+      escolaridade: this.form.controls.escolaridade.value!,
+      experienciaProfissional: this.experiencias,
+      habilidadesPessoais: this.habilidadesPessoais,
+      habilidadesTecnicas: this.habilidadesTecnicas,
+      idiomas: this.idiomas
+    }
+    this.curriculoService.criarCurriculo(body).subscribe({
+      next: (response) => {
+        
+      }
+    })
+  }
 
 }

@@ -39,7 +39,8 @@ export class AppLogin2Component {
     this.loginService.login(login).subscribe({
       next: (response) => {
         localStorage.setItem('token', response.token)
-        localStorage.setItem('id', response.id.toString())
+        localStorage.setItem('empresaId', response.empresaId.toString())
+        localStorage.setItem('profissionalId', response.profissionalId.toString())
         console.log(response)
         if(response.role === 'PROFISSIONAL') {
           this.router.navigate(['/perfil-profissional'])

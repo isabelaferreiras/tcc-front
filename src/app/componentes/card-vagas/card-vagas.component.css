@@ -44,6 +44,19 @@
     margin: 0;
 }
 
+.endereco {
+    display: flex;
+    flex-direction: row;
+}
+
+.cidade p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
 .codigo-empresa p{
     font-size: 0.8rem;
     font-weight: bold;

@@ -1,49 +1,43 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, inject } from '@angular/core';
-import { Card } from '../../interfaces/card';
-import { Empresa } from '../../interfaces/empresa';
-import { Endereco } from '../../interfaces/endereco';
-import { RouterLink } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
+import { Card, VerVagaProfissional } from '../../interfaces/card';
 import {
-  MatDialog,
-  MatDialogActions,
+
   MatDialogClose,
-  MatDialogContent,
-  MatDialogTitle,
+
 } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+import { VagaService } from '../../services/vaga.service';
+
 
 @Component({
   selector: 'app-card-vagas',
   standalone: true,
-  imports: [MatButtonModule, RouterLink, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
+  imports: [ MatDialogClose],
   templateUrl: './card-vagas.component.html',
   styleUrl: './card-vagas.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [VagaService]
 })
 
 
 export class CardVagasComponent implements OnInit{
 
-  constructor() {
+  constructor(private vagaService: VagaService) {
     console.log('CardVagasComponent inicializado');
   }
 
   ngOnInit(): void {
-    console.log('Dados do card:', this.card);
+    console.log('Dados do card:', this.vaga);
   }
 
-  @Input({required: true}) card!: Card;
-  @Input({required: true}) empresa!: Empresa;
-  @Input({required: true}) endereco!: Endereco;
+  @Input({required: true}) vaga!: VerVagaProfissional;
 
-  readonly dialog = inject(MatDialog);
-
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DialogComponent, {
-      width: '250px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
+  cadastrarNaVaga(vagaId: number) {
+    this.vagaService.candidatarNaVaga(Number(localStorage.getItem('id')), vagaId).subscribe({
+      next: (response) => {
+        console.log('cadastrado com sucesso');
+        
+      }
+    })
   }
+  
 }

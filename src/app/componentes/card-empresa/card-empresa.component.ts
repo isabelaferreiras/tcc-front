@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
-import { Card } from '../../interfaces/card';
+import { Card, VerVaga } from '../../interfaces/card';
 import { Empresa } from '../../interfaces/empresa';
 import { Endereco } from '../../interfaces/endereco';
 import { MatDialog } from '@angular/material/dialog';
@@ -20,12 +20,11 @@ export class CardEmpresaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('Dados do card:', this.card);
+    console.log('Dados do card:', this.vaga);
   }
 
-  @Input({required: true}) card!: Card;
-  @Input({required: true}) empresa!: Empresa;
-  @Input({required: true}) endereco!: Endereco;
+  @Input({required: true}) vaga!: VerVaga;
+
 
   readonly dialog = inject(MatDialog);
 

@@ -18,6 +18,8 @@ import { CriarProfissional } from '../../interfaces/profissional';
 })
 export class NewRegisterComponent {
 
+  
+
   constructor(private registerService: RegisterService, private router: Router) {}
 
   hide = signal(true);
@@ -25,6 +27,8 @@ export class NewRegisterComponent {
     this.hide.set(!this.hide());
     event.stopPropagation();
   }
+
+  
 
   form = new FormGroup({
     email: new FormControl('', [Validators.required]),

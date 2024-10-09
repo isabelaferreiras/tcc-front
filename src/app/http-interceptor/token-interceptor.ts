@@ -5,8 +5,9 @@ export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, n
     const token = localStorage.getItem('token');
     const publicEndpoint = [
         '/auth/login',
-        '/profissional/',
-        '/empresa/',
+        '/auth/register',
+        '/profissional/cadastrarProfissional',
+        '/empresa/cadastrarEmpresa',
     ]
 
     const isPublicEndpoint = (url: string) => {
@@ -21,9 +22,12 @@ export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, n
         return next(req);
     }
 
-    if(token) {
-        req = req.clone({ setHeaders: {Authorization: `Bearer ${token}`}});
-        return next(req);
+    if(token && !isPublicEndpoint(req.url)) {
+        console.log('adicioneiToken')
+        const authReq = req.clone({
+            setHeaders: { Authorization: 'Bearer ' + token},
+        });
+        return next(authReq);
     }
 
     return next(req);

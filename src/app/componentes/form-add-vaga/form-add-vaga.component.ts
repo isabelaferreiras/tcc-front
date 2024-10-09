@@ -17,6 +17,15 @@ export class FormAddVagaComponent {
 
   constructor(private vagaService: VagaService, private router: Router) {}
 
+  /*export interface CriarCurriculo{
+    profissionalId: number;
+    escolaridade: string;
+    experienciaProfissional: ExperienciaProfissional[];
+    habilidadesPessoais: HabilidadesPessoais[];
+    habilidadesTecnicas: HabilidadesTecnicas[];
+    idiomas: Idioma[];
+}*/
+
   form = new FormGroup({
     titulo: new FormControl('', [Validators.required]),
     empresaId: new FormControl(Number(localStorage.getItem('id'))),

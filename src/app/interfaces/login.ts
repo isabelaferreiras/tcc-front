@@ -4,7 +4,8 @@ export interface Login {
 }
 
 export interface LoginResponse {
-    id: number;
+    empresaId: number;
+    profissionalId: number;
     token: string;
     role: string;
 }

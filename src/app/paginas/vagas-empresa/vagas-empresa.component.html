@@ -5,11 +5,9 @@
         <h2><strong>Vagas postadas</strong></h2>
     </div>
     <div class="card-container">
-        <div class="card" *ngFor="let card of cardList">
+        <div class="card" *ngFor="let vaga of vagaList">
             <app-card-empresa
-            [card]="cardData"
-            [empresa]="empresaData"
-            [endereco]="enderecoData"></app-card-empresa>
+            [vaga]="vaga"></app-card-empresa>
         </div>
     </div>
     <div class="botao">
