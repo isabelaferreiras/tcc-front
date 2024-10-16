@@ -1,0 +1,142 @@
+/* Estilo geral para o cabeçalho */
+.cabecalho-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b36924;
+    color: white;
+    padding: 0.938rem 1.875rem;
+}
+
+.canto {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* Estilo para a logo */
+.logo-pequena {
+    margin: 0;
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+/* Estilo para o menu de navegação */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Estilo para os links do menu */
+.menu a {
+    text-decoration: none;
+    font-size: 0.94rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Estilo para a barra de pesquisa */
+.sair {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.sair img {
+    width: 1.5rem;
+}
+
+.perfil-profissional {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.perfil-profissional img {
+    width: 2rem;
+}
+
+/* Estilo para o perfil do usuário */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Estilo para os links do perfil */
+.perfil a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Menu hamburguer escondido por padrão */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    .cabecalho-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        display: none; /* Oculte o menu inicialmente */
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #ffffff;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Exibir o botão de menu */
+    .hamburger {
+        margin: 0.5rem 0 0.5rem 0;
+        display: block;
+    }
+
+    /* Estilize o campo de pesquisa */
+    .pesquisa {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .pesquisa input {
+        width: 70%;
+    }
+
+    .pesquisa button {
+        padding: 0.313rem;
+    }
+
+    /* Ocultar perfil inicialmente em telas menores */
+    .perfil {
+        display: none;
+    }
+
+    /* Exibir menu ao clicar no hamburguer */
+    .menu.show {
+        display: flex;
+    }
+    .pesquisar-icone{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+}

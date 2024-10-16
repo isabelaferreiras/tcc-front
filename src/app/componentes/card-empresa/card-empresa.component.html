@@ -1,0 +1,36 @@
+<div class="card-container">
+    <div class="itens-card">
+        <div class="neto">
+
+            <div class="titulos-card">
+                <div class="titulo">
+                    <h3><strong>{{ vaga.titulo }}</strong></h3>
+                </div>
+                <div class="cargo">
+                    <p>{{ vaga.cargo }}</p>
+                </div>
+            </div>
+
+            <div class="descricao">
+                <p>{{ vaga.descricao }}</p>
+            </div>
+
+            <div class="calda-card">
+                <div class="infos">
+                    <div class="situacao">
+                        <p>Situação da vaga: {{ vaga.situacao }}</p>
+                    </div>
+                </div>
+    
+                <div class="botoes">
+                    <div class="botao-ver-mais">
+                        <button type="button" class="botao" mat-raised-button (click)="openDialog('0ms', '0ms')">Ver informações</button>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+</div>

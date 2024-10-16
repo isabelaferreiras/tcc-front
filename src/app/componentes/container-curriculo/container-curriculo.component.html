@@ -1,0 +1,69 @@
+<div class="main-main">
+
+    <div class="voltar">
+        <button routerLink="/candidatos-da-vaga">
+            <img class="seta" src="../../../assets/arrow-back.png" alt="">
+            <a routerLink="/candidatos-da-vaga">Voltar</a>
+        </button>
+    </div>
+
+    <div class="main-container">
+
+        <div class="itens-container">
+            <div class="titulo">
+                <h2>Currículo de {{ curriculo.profissional.nome }}</h2>
+            </div>
+            
+            <div class="escolaridade">
+                <h3><strong>Escolaridade: </strong>{{ curriculo.escolaridade }}</h3>
+            </div>
+            
+            <div class="titulo-2">
+                <h3><strong>Experiência Profissional:</strong></h3>
+            </div>
+            
+            <div class="lista-experiencia">
+                <ul>
+                    <li *ngFor="let experiencia of curriculo.experienciaProfissional">
+                        <p><strong>Cargo:</strong> {{ experiencia.cargo }}</p>
+                        <p><strong>Empresa:</strong> {{ experiencia.empresa }}</p>
+                        <p><strong>Endereço:</strong> {{ experiencia.endereco.cidade }}, {{ experiencia.endereco.estado }}</p>
+                        <p><strong>Descrição:</strong> {{ experiencia.descricao }}</p>
+                        <p><strong>Data de Início:</strong> {{ experiencia.dataComeco | date:'dd/MM/yyyy' }}</p>
+                        <p><strong>Data de Fim:</strong> {{ experiencia.dataFim | date:'dd/MM/yyyy' }}</p>
+                        <p><strong>Salário:</strong> R$ {{ experiencia.salario }}</p>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="titulo-2">
+                <h3><strong>Habilidades Pessoais:</strong></h3>
+            </div>
+    
+            <div class="lista-hab-pessoais">
+                <ul>
+                    <li *ngFor="let habilidade of curriculo.habilidadesPessoais">
+                        {{ habilidade.habilidade }}
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="titulo-2">
+                <h3><strong>Habilidades Técnicas:</strong></h3>
+            </div>
+            
+            <div class="lista-hab-tecnicas">
+                <ul>
+                    <li *ngFor="let habilidade of curriculo.habilidadesTecnicas">
+                        {{ habilidade.habilidade }}
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+  

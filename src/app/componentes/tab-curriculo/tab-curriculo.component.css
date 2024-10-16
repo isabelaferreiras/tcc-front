@@ -1,0 +1,264 @@
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: #592405;
+    --mat-tab-header-disabled-ripple-color: #592405;
+    --mat-tab-header-pagination-icon-color: #592405;
+    --mat-tab-header-inactive-label-text-color: #592405;
+    --mat-tab-header-active-label-text-color: #592405;
+    --mat-tab-header-active-ripple-color: #592405;
+    --mat-tab-header-inactive-ripple-color: #c4738a;
+    --mat-tab-header-inactive-focus-label-text-color: rgba(15, 8, 8, 0.6);
+    --mat-tab-header-inactive-hover-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-active-focus-label-text-color: #592405;
+    --mat-tab-header-active-hover-label-text-color: #592405;
+    --mat-tab-header-active-focus-indicator-color: #592405;
+    --mat-tab-header-active-hover-indicator-color: #592405;
+}
+
+.main-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.botao-salvar {
+    display: flex;
+    justify-content: center;
+}
+
+.botao-salvar button {
+    width: 6rem;
+    background-color: #592405;
+    border: 1px solid #592405;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+
+.titulo {
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.container-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem 0 2rem;
+}
+
+.dados {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.dados input {
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+.nome {
+    width: 100%;
+}
+
+.sobrenome {
+    width: 100%;
+}
+
+.email {
+    width: 100%;
+}
+
+.data-nascimento{
+    width: 100%;
+}
+
+.telefone {
+    width: 100%;
+}
+
+.data-nascimento input {
+    cursor: pointer;
+}
+
+.container-endereco {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.cidade {
+    width: 100%;
+}
+
+.cidade input {
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+.cidade select {
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+.container-escolaridade {
+    width: 100%;
+    padding: 2rem;
+}
+
+.escolaridade select{
+    width: 100%;
+    padding-left: 0.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+    cursor: pointer;
+}
+
+.container-experiencia {
+    padding: 2rem;
+}
+
+.experiencias {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2rem;
+}
+
+.experiencias input {
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+.cargo {
+    width: 100%;
+}
+
+.empresa {
+    width: 100%;
+}
+
+.descricao {
+    padding-bottom: 2rem;
+}
+
+.descricao textarea {
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+.container-escolaridade {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-end {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.container-datas {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.data {
+    width: 100%;
+}
+
+.data input {
+    width: 100%;
+    padding-left: 0.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+    cursor: pointer;
+}
+
+.salario input {
+    width: 100%;
+    padding-left: 0.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+
+.botao-remover {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.botao-remover button {
+    width: 5rem;
+    height: 2rem;
+    color: white;
+    background-color: #592405;
+    border: 1px solid #592405;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.botoes-add-save {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.botoes-add-save button {
+    width: 8rem;
+    max-width: 10rem;
+    height: 3rem;
+    color: white;
+    background-color: #592405;
+    border: 1px solid #592405;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.escolaridade input{
+    width: 100%;
+    padding-left: 0.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #592405;
+}
+
+

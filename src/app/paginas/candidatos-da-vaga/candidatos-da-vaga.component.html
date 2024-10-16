@@ -1,0 +1,28 @@
+<app-cabecalho-empresa></app-cabecalho-empresa>
+
+
+
+<div class="main-container">
+
+    <div class="titulo">
+
+        <div class="voltar">
+            <button routerLink="/vagas-empresa">
+                <img class="seta" src="../../../assets/arrow-back.png" alt="">
+                <a routerLink="/vagas-empresa">Voltar</a>
+            </button>
+        </div>
+        <div>
+            <h2><strong>Candidatos inscritos na vaga</strong></h2>
+        </div>
+
+        
+    </div>
+
+    <div class="geral">
+        <div class="profissional" *ngFor="let profissional of profissionalList">
+            <app-view-profissional
+            [profissional]="profissional"></app-view-profissional>
+        </div>
+    </div>
+</div>

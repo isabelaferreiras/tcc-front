@@ -1,0 +1,110 @@
+
+.login {
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(61, 139, 253, 0.15);
+    width: 453px;
+    height: 100vh;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 56px 134px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.voltar {
+    margin-right: 22rem;
+}
+
+.voltar button {
+    cursor: pointer;
+}
+
+.seta {
+    width: 2rem;
+}
+
+.logo-pequena {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.dialogo{
+    text-align: center;  /* Centraliza o texto horizontalmente */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;  /* Ajuste conforme necessário */
+    color: #b36924;   /* Cor conforme o protótipo */
+    margin-top: 30px;
+}
+
+p {
+    margin: 10; /* Remove margens padrão para garantir alinhamento correto */
+    padding: 0;
+  }
+
+.email {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    border-radius: 12px;
+    border: 1px solid #592405;
+    height: 32px;
+    width: 268px;
+}
+
+.inputs{
+    /*border: 0.063rem solid #592405;*/
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.001rem;
+}
+
+input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 0.75rem;
+    border: 0.063rem solid #592405;
+    height: 2rem;
+    width: 16.75rem;
+    background-color: #ffffff;
+    padding-left: 0.5rem;
+}
+
+.container-senha {
+    /*border: 0.063rem solid #592405;*/
+    display: inline-flex;
+    flex-direction: row;
+    height: 3.75rem;
+    max-width: 100%;
+    /*justify-content: space-evenly;*/
+}
+
+.input-senha{
+    margin-top: 0.5rem;
+}
+
+.botao-senha {
+    margin-bottom: 0.063rem;
+    /*border: 0.063rem solid #592405;*/
+}
+
+.enter{
+    margin-top: 1rem;
+    background-color: #592405;
+    color: #ffffff;
+    width: 6rem; 
+    border-radius: 0.5rem;   
+    border: 0.5rem solid #592405;      /* Certifique-se que ocupa a largura do container */
+    cursor: pointer;           /* Aparece como botão interativo */
+    text-align: center;
+}

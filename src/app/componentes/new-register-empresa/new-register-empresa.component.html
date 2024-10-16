@@ -1,0 +1,65 @@
+<form [formGroup]="form">
+    <section class="main_container">
+        <section class="form__container">
+            <section class="registro">
+                <div>
+                    <img src="../../../assets/logo branca.jpeg" width="200px" alt="logo" class="logo-pequena">
+                </div>
+                <div class="dialogo">
+                    <p class="dialogo-1">Você é uma empresa...</p>
+                </div>
+                <div class="inputs">
+                    <div class="nome-sobrenome">
+                        <input type="email" name="email" placeholder="E-mail" class="email-input" formControlName="email">
+                    </div>
+                    <div class="container-senha">
+                        <div class="input-senha">
+                            <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Senha" class="password" formControlName="password"/>
+                            <button class="botao-senha" mat-icon-button matSuffix (click)="clickEvent($event)"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nome-sobrenome">
+                        <input type="name" placeholder="Nome da empresa" class="nome" formControlName="nomeEmpresa">
+                    </div>
+                    <div class="nome-sobrenome">
+                        <input type="cnpj" name="cnpj" placeholder="CNPJ" class="cnpj" formControlName="cnpj">
+                    </div>
+                    
+                    <div class="nome-sobrenome">
+                        <input type="text" placeholder="Ramo" formControlName="ramo">
+                    </div>
+
+                    <div class="nome-sobrenome">
+                        <textarea name="descricao" id="" placeholder="Descreva sua empresa" formControlName="descricao" ></textarea>
+                    </div>
+
+
+                    <div class="endereco">
+                        <div class="nome-sobrenome" formGroupName="endereco">
+                            <div>
+                                <input type="text" placeholder="Cidade" formControlName="cidade">
+                            </div>
+                            <div>
+                                <input type="text" name="estado" id="" placeholder="Estado" formControlName="estado">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="itens">
+                    <div class="botao">
+                        <button class="botao-registrar" (click)="onSubmit()">Registrar</button>
+                    </div>
+                    <div class="voltar">
+                        <p routerLink="/login" class="dialogo-2">Usuário já existente? Entre na sua conta</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</form>

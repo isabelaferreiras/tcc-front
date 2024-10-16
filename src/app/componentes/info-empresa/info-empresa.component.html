@@ -1,0 +1,32 @@
+<div class="info-container">
+    <h3><strong>Informações</strong></h3>
+    <div class="itens-container">
+        <div class="inputs">
+            <div class="nome-sobrenome">
+                <input type="text" placeholder="Nome da empresa" class="nome" [readOnly]="habilitarInput" >
+            </div>
+            <div class="nome-sobrenome">
+                <input type="email" name="email" placeholder="E-mail" class="email-input" [readOnly]="habilitarInput">
+            </div>
+            <div class="container-senha">
+                <div class="input-senha">
+                    <input type="password" placeholder="Senha" class="password" [readOnly]="habilitarInput"/>
+                </div>
+            </div>
+            <div class="nome-sobrenome">
+                <div>
+                    <input type="tel" name="telefone" id="" placeholder="Adicionar telefone" [readOnly]="habilitarInput">
+                </div>
+                <div>
+                    <input type="text" name="cnpj" placeholder="CNPJ">
+                </div>
+            </div>
+            <div class="nome-sobrenome">
+                <input type="text" name="ramo" placeholder="Ramo">
+            </div>
+        </div>
+        <div class="botao-editar">
+            <button type="button" (click)="enableInput()" class="botao">Editar Informações</button>
+        </div>
+    </div>
+</div>

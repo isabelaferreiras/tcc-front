@@ -1,0 +1,198 @@
+<form [formGroup]="form">
+    <div class="main-main-container">
+
+        <div class="tab">
+            <mat-tab-group>
+        
+                <mat-tab label="Escolaridade">
+                    
+                    <div class="container-escolaridade">
+                        <div class="escolaridade">
+                            <select name="escolaridade" formControlName="escolaridade">
+                                <option value="ENSINO_FUNDAMENTAL_INCOMPLETO">Ensino Fundamental Incompleto</option>
+                                <option value="ENSINO_FUNDAMENTAL_COMPLETO">Ensino Fundamental Completo</option>
+                                <option value="ENSINO_MEDIO_INCOMPLETO">Ensino Médio Incompleto</option>
+                                <option value="ENSINO_MEDIO_COMPLETO">Ensino Médio Completo</option>
+                                <option value="ENSINO_TECNICO">Ensino Técnico</option>
+                                <option value="GRADUACAO_INCOMPLETA">Graduação Incompleta</option>
+                                <option value="GRADUACAO_CURSANDO">Graduação Cursando/option>
+                                <option value="GRADUACAO_COMPLETA">Graduação Completa</option>
+                                <option value="POS_GRADUACAO">Pós Graduação/option>
+                                <option value="MESTRADO">Mestrado</option>
+                                <option value="DOUTORADO">Doutorado</option>
+                                <option value="POS_DOUTORADO">Pós Doutorado</option>
+                            </select>
+                        </div>
+                    </div>
+                </mat-tab>
+        
+                <mat-tab label="Experiência profissional">
+        
+                    <div class="container-experiencia" formGroupName="experienciaProfissional">
+        
+                        <div class="titulo-2">
+                            <h2><strong>Experiência - preencha abaixo:</strong></h2>
+                        </div>
+        
+                        <div class="experiencias">
+                            <div class="cargo">
+                                <input type="text" name="cargo" formControlName="cargo" placeholder="Cargo">
+                            </div>
+                            <div class="empresa">
+                                <input type="text" name="empresa" formControlName="empresa" placeholder="Empresa">
+                            </div>
+                        </div>
+        
+                        <div class="texto">
+                            <div class="descricao">
+                                <textarea name="descricao" id="" formControlName="descricao" placeholder="Descreva suas funções onde trabalhava"></textarea>
+                            </div>
+                        </div>
+        
+                        <div class="titulo-2">
+                            <h3><strong>Endereço</strong></h3>
+                        </div>
+        
+                        <div class="container-end" formGroupName="endereco">
+                            <div class="cidade">
+                                <input type="text" name="cidade" formControlName="cidade" placeholder="Cidade">
+                            </div>
+                            <div class="cidade">
+                                <select name="estado" formControlName="estado" id="" class="estados">
+                                    <option value="">AC</option>
+                                    <option value="">AL</option>
+                                    <option value="">AP</option>
+                                    <option value="">AM</option>
+                                    <option value="">BA</option>
+                                    <option value="">CE</option>
+                                    <option value="">DF</option>
+                                    <option value="">ES</option>
+                                    <option value="">GO</option>
+                                    <option value="">MA</option>
+                                    <option value="">MT</option>
+                                    <option value="">MS</option>
+                                    <option value="">MG</option>
+                                    <option value="">PA</option>
+                                    <option value="">PB</option>
+                                    <option value="">PR</option>
+                                    <option value="">PE</option>
+                                    <option value="">PI</option>
+                                    <option value="">RJ</option>
+                                    <option value="">RN</option>
+                                    <option value="">RS</option>
+                                    <option value="">RO</option>
+                                    <option value="">RR</option>
+                                    <option value="">SC</option>
+                                    <option value="">SP</option>
+                                    <option value="">SE</option>
+                                    <option value="">TO</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <div class="titulo-2">
+                            <h3><strong>Começo e fim</strong></h3>
+                        </div>
+        
+                        <div class="container-datas">
+                            <div class="data">
+                                <input type="date" formControlName="dataComeco" name="começo">
+                            </div>
+                            <div class="data">
+                                <input type="date" formControlName="dataFim" name="fim">
+                            </div>
+                        </div>
+        
+                        <div class="titulo-2">
+                            <h3><strong>Salário</strong></h3>
+                        </div>
+        
+                        <div class="container-salario">
+                            <div class="salario">
+                                <input type="number" formControlName="salario" placeholder="0,00">
+                            </div>
+                        </div>
+                    
+                    </div>
+        
+                    <div class="botoes-add-save">
+        
+                        <div>
+                            <button (click)="adicionarExperiencia()">Adicionar nova experiência</button>
+                        </div>
+        
+                        
+                    </div>
+                    
+        
+                </mat-tab>
+        
+                <mat-tab label="Habilidades pessoais">
+        
+                    <div class="container-escolaridade" formGroupName="habilidadesPessoais">
+                        <div class="escolaridade">
+                            <input type="text" name="" formControlName="habilidade" placeholder="Habilidade pessoal">
+                        </div>
+                    </div>
+        
+                    <div class="botoes-add-save">
+                        <div>
+                            <button (click)="adicionarHabilidadePessoal()">Adicionar nova habilidade</button>
+                        </div>
+                    </div>
+        
+                </mat-tab>
+                <mat-tab label="Habilidades técnicas">
+        
+                    <div class="container-escolaridade" formGroupName="habilidadesTecnicas">
+                        <div class="escolaridade">
+                            <input type="text" name="" placeholder="Habilidades técnicas" formControlName="habilidade">
+                        </div>
+        
+                        
+                    </div>
+        
+                    <div class="botoes-add-save">
+        
+                        <div>
+                            <button (click)="adicionarHabilidadeTecnica()">Adicionar nova habilidade</button>
+                        </div>
+        
+                        
+                    </div>
+        
+                </mat-tab>
+        
+                <mat-tab label="Idiomas">
+                    <div class="container-escolaridade" formGroupName="idiomas">
+                        <div class="escolaridade">
+                            <input type="text" name="idioma" placeholder="Idioma" formControlName="idioma">
+                        </div>
+                        <div class="escolaridade">
+                            <input type="text" name="nivel" placeholder="Nível de leitura: básico, médio, avançado" formControlName="nivelLeitura">
+                        </div>
+                        <div class="escolaridade">
+                            <input type="text" name="nivel" placeholder="Nível de conversação: básico, médio, avançado" formControlName="nivelConversacao">
+                        </div>
+                    </div>
+        
+                    <div class="botoes-add-save">
+        
+                        <div>
+                            <button (click)="adicionarIdioma()">Adicionar novo idioma</button>
+                        </div>
+        
+                        
+                    </div>
+                </mat-tab>
+                
+            </mat-tab-group>
+        </div>
+
+        <div class="botao-salvar">
+            <button type="submit" (click)="onSubmit()">Salvar currículo</button>
+        </div>
+        
+    </div>
+    
+</form>

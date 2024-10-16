@@ -1,0 +1,32 @@
+<nav class="cabecalho-container">
+
+  <div class="canto">
+    <div>
+      <img src="../../../assets/logo branca.jpeg" alt="logo" class="logo-pequena">
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      &#9776; <!-- Ícone de menu -->
+    </div>
+    <div class="menu" [ngClass]="{'show': isMenuOpen}">
+      <a routerLink="/vagas-profissional" routerLinkActive="active">Minhas vagas</a>
+      <a routerLink="/vagas-disponiveis">Vagas disponíveis</a>
+      <a routerLink="/curriculo-page">Currículo</a>
+      <a routerLink="/sobre-nos-profissional">Sobre nós</a>
+    </div>
+  </div>
+
+
+
+    <div class="perfil">
+      <div class="perfil-profissional">
+        <img src="../../../assets/account.png" alt="account">
+        <a routerLink="/perfil-profissional">Meu perfil</a>
+      </div>
+      <div class="sair">
+        <img src="../../../assets/logout.png" alt="logout" routerLink="/login">
+        <a routerLink="/login">Sair</a>
+      </div>
+      
+    </div>
+  </nav>
+  

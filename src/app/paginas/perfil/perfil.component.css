@@ -1,0 +1,73 @@
+.pai {
+    /*border: 1px solid lime;*/
+    display: flex;
+    flex-direction: row; 
+    gap: 3rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+p {
+    color: #592405;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.perfil {
+    /*border: 1px solid rgb(238, 83, 11); */
+    width: 20rem;
+    max-width: 25rem;
+    margin-top: 2rem;   
+}
+
+
+.mini-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 25rem;
+    align-items: center;
+}
+
+.foto-perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    /*border: 1px solid lime;*/
+}
+
+.foto {
+    border-radius: 50%;
+    max-width: 4rem;
+}
+
+.botao-curriculo {
+    text-align: center;
+    justify-content: center;
+   /* border: 1px solid lime;*/
+}
+
+.botao {
+    width: 15rem;
+    height: 3rem;
+    background-color: #592405;
+    color: white;
+    border: 1px solid #592405;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.containers-informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /*border: 1px solid blue;*/
+}
+
+.container-1 {
+    margin-top: 1rem;
+}

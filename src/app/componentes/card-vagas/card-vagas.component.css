@@ -1,0 +1,89 @@
+.card-container {
+    max-width: 23rem;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.527);
+    border-radius: 0.625rem;
+}
+
+.itens-card {
+    width: 100%;
+}
+
+.titulos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.6rem;
+}
+
+.titulo h3 {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.cargo p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.descricao p {
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.calda-card {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+}
+
+.empresa p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.endereco {
+    display: flex;
+    flex-direction: row;
+}
+
+.cidade p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.codigo-empresa p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.situacao p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: #592405;
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms;
+    border: 1px solid #592405;
+}
+
+button:hover {
+    background-color: #221005;
+}
+
+
+
+

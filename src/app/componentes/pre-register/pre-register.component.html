@@ -1,0 +1,17 @@
+<section class="login">
+    <div class="imagem">
+        <img src="../../../assets/logo branca.jpeg" class="logo-pequena">
+    </div>
+    <div class="pergunta">
+        <p class="dialogo">Deseja registrar-se como profissional ou empresa?</p>
+    </div>
+    <div class="seletor">
+        <select name="Opções de registro" [(ngModel)]="selectedOption">
+            <option value="Empresa">Empresa</option>
+            <option value="Profissional">Profissional</option>
+        </select>
+    </div>
+    <div class="botao">
+        <button (click)="navigate()">Prosseguir</button>
+    </div>
+</section>

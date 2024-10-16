@@ -1,0 +1,19 @@
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.titulo h2 {
+    color: #592405;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-around;
+    gap: 1rem;
+}

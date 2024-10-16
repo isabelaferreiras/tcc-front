@@ -1,0 +1,44 @@
+<div class="endereco-container">
+    <h3><strong>Endereço</strong></h3>
+    <div class="itens-container">
+        <div class="inputs">
+            <div class="nome-sobrenome">
+                <input type="text" placeholder="Cidade" [readOnly]="habilitarInput">
+            </div>
+            <div class="nome-sobrenome">
+                <select name="estados" id="" class="estados" [disabled]="habilitarInput">
+                    <option value="">AC</option>
+                    <option value="">AL</option>
+                    <option value="">AP</option>
+                    <option value="">AM</option>
+                    <option value="">BA</option>
+                    <option value="">CE</option>
+                    <option value="">DF</option>
+                    <option value="">ES</option>
+                    <option value="">GO</option>
+                    <option value="">MA</option>
+                    <option value="">MT</option>
+                    <option value="">MS</option>
+                    <option value="">MG</option>
+                    <option value="">PA</option>
+                    <option value="">PB</option>
+                    <option value="">PR</option>
+                    <option value="">PE</option>
+                    <option value="">PI</option>
+                    <option value="">RJ</option>
+                    <option value="">RN</option>
+                    <option value="">RS</option>
+                    <option value="">RO</option>
+                    <option value="">RR</option>
+                    <option value="">SC</option>
+                    <option value="">SP</option>
+                    <option value="">SE</option>
+                    <option value="">TO</option>
+                </select>
+            </div>
+        </div>
+        <div class="botao-editar">
+            <button type="button" (click)="enableInput()" class="botao">Editar Informações</button>
+        </div>
+    </div>
+</div>

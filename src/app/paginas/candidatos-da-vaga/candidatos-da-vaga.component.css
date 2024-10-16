@@ -1,0 +1,37 @@
+.main-container {
+    padding: 2rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+h2 {
+    color: #592405;
+}
+
+.voltar {
+    border: none;
+}
+
+.voltar button {
+    border: none;
+    background-color: white;
+}
+
+.voltar a {
+    text-decoration: none;
+}
+
+img {
+    width: 2rem;
+    height: 2rem;
+}
+
+button {
+    cursor: pointer;
+    text-decoration: none;
+}

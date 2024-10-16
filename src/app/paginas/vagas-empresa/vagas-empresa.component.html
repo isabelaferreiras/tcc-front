@@ -1,0 +1,18 @@
+<app-cabecalho-empresa></app-cabecalho-empresa>
+
+<div class="body-container">
+    <div class="titulo">
+        <h2><strong>Vagas postadas</strong></h2>
+    </div>
+    <div class="card-container">
+        <div class="card" *ngFor="let vaga of vagaList">
+            <app-card-empresa
+            [vaga]="vaga"></app-card-empresa>
+        </div>
+    </div>
+    <div class="botao">
+        <button routerLink="/add-vaga-page">Adicionar vaga</button>
+    </div>
+</div>
+
+

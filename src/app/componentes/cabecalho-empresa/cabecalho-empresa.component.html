@@ -1,0 +1,28 @@
+<nav class="cabecalho-container">
+  <div class="canto">
+    <div>
+      <img src="../../../assets/logo branca.jpeg" alt="logo" class="logo-pequena">
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      &#9776; <!-- Ícone de menu -->
+    </div>
+    <div class="menu" [ngClass]="{'show': isMenuOpen}">
+      <a routerLink="/vagas-empresa">Vagas</a>
+      <a routerLink="/sobre-nos-empresa">Sobre nós</a>
+    </div>
+  </div>
+
+    
+    <div class="perfil">
+      <div class="perfil-empresa">
+        <i class="material-symbols-outlined">groups</i>
+        <a routerLink="/perfil-empresa">Perfil da empresa</a>
+      </div>
+      <div class="sair">
+        <img src="../../../assets/logout.png" alt="logout" routerLink="/login">
+        <a routerLink="/login">Sair</a>
+      </div>
+      
+    </div>
+  </nav>
+  

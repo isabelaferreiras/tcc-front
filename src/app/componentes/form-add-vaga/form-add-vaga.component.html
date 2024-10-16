@@ -1,0 +1,62 @@
+<form [formGroup]="form" >
+
+    <div class="main-main-container">
+
+        <div class="voltar">
+            <button routerLink="/vagas-empresa">
+                <img class="seta" src="../../../assets/arrow-back.png" alt="">
+                <a routerLink="/vagas-empresa">Voltar</a>
+            </button>
+        </div>
+
+        <div class="form-container">
+            <div class="itens-form">
+    
+                <div class="titulo-vaga">
+                    <h2><strong>Adicionar vaga</strong></h2>
+                </div>
+    
+                <div class="titulo">
+                    <input type="text" name="titulo" id="" placeholder="Título da vaga" formControlName="titulo">
+                </div>
+    
+                <div class="cargo">
+                    <input type="text" name="cargo" id="" placeholder="Cargo" formControlName="cargo">
+                </div>
+    
+                <div class="descricao">
+                    <textarea name="descricao" id="" placeholder="Insira uma descrição para a vaga" formControlName="descricao"></textarea>
+                </div>
+    
+                <div class="endereco" formGroupName="endereco">
+                    <div class="cidade">
+                        <input type="text" name="cidade" id="" placeholder="Cidade" formControlName="cidade">
+                    </div>
+                    <div class="estado">
+                        <input type="text" name="estado" id="" placeholder="estado" formControlName="estado">
+                    </div>
+                </div>
+    
+                <!-- Novo Checkbox para o campo limite -->
+                <div class="limite">
+                    <label>Limitar número de profissionais?</label>
+                    <input type="checkbox" formControlName="limite"> 
+                </div>
+    
+    
+    
+                <!-- Novo Input numérico para o campo limiteProfissionais -->
+                <div class="limite-profissionais" *ngIf="form.get('limite')?.value">
+                    <label for="limiteProfissionais">Número limite de profissionais:</label>
+                    <input formControlName="limiteProfissionais" type="number" name="limiteProfissionais" id="limiteProfissionais" min="1">
+                </div>
+    
+                <div class="botao-save">
+                    <button (click)="onSubmit()">Salvar</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    
